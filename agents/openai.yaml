@@ -1,4 +1,4 @@
 interface:
   display_name: "跨境吴老师 AMC 目标人群触达率看板 Skill"
   short_description: "上传并核验 AMC 人群曝光 CSV，生成离线触达率看板"
-  default_prompt: "使用 $kuajing-wulaoshi-amc-audience-reach-penetration-dashboard，先让我上传本次 AMC 人群曝光 CSV，核验格式正确后生成看板。"
+  default_prompt: "使用 $kuajing-wulaoshi-amc-audience-reach-penetration-dashboard，先让我上传 Reach penetration within target audience Case 导出的 CSV，核验格式正确后生成看板。"

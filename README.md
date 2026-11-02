@@ -1,6 +1,6 @@
 # 跨境吴老师 AMC 目标人群触达率看板 Skill
 
-上传一份 AMC 人群曝光 CSV，先检查表格格式，再生成可离线打开、可筛选和下载的单文件触达率看板。
+上传一份亚马逊营销云 AMC 的 Reach penetration within target audience Case 导出的 CSV，先检查表格格式，再生成可离线打开、可筛选和下载的单文件触达率看板。
 
 ## 适用场景
 
@@ -8,7 +8,7 @@
 
 ## 运行前准备
 
-- 准备一份本次报告的 UTF-8 CSV，包含 `exposure`、`segment_id`、`segment_name`、`user_count`。具体允许值和计算见 [数据契约](references/data-contract.md)。
+- 准备一份本次运行 Reach penetration within target audience Case 后导出的 UTF-8 CSV，包含 `exposure`、`segment_id`、`segment_name`、`user_count`。具体允许值和计算见 [数据契约](references/data-contract.md)。
 - 运行环境需要 Python 3.10 或更高版本；不需要第三方 Python 包、MCP 服务或联网图表库。Skill 不包含发布者本机路径或客户数据。
 
 ## 首次安装
@@ -24,10 +24,12 @@
 ## 启动方式
 
 ```text
-使用 $kuajing-wulaoshi-amc-audience-reach-penetration-dashboard 生成看板。请先让我上传本次 AMC 人群曝光 CSV，核验格式正确后再生成。
+使用 $kuajing-wulaoshi-amc-audience-reach-penetration-dashboard 生成看板。请先让我上传 Reach penetration within target audience Case 导出的 CSV，核验格式正确后再生成。
 ```
 
 若启动消息已附 CSV，Skill 会直接核验该文件，不要求重复上传。
+
+未附文件时，Skill 会先提示：`跨境吴老师需要您上传亚马逊营销云 AMC 中 Reach penetration within target audience 这个 Case 运行后导出的 CSV 数据报表，才能生成看板。请上传文件。`
 
 ## 执行结果与失败边界
 
@@ -45,6 +47,11 @@ Skill 先核验字段、编码、曝光类别、非负计数和人群记录。�
 - [`scripts/selftest.py`](scripts/selftest.py)：无客户数据的逻辑自检。
 
 ## 版本更新记录
+
+### v1.0.1｜2026-11-02
+
+- 将运行时上传提示改为明确要求 Reach penetration within target audience Case 导出的 CSV，并同步更新启动说明。
+- 影响范围：Skill 启动提示与文档；CSV 核验和看板计算规则未变。
 
 ### v1.0.0｜2026-11-01
 
